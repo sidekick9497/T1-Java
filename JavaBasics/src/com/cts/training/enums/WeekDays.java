@@ -9,16 +9,18 @@ public enum WeekDays {
 	SATURDAY,
 	SUNDAY;
 	
-	public int workingHrs;
+	// public int workingHrs;
 	
 	private WeekDays() {
 		// TODO Auto-generated constructor stub
-		this.workingHrs = 8;
+		// this.workingHrs = 8;
 	}
 	public int getWorkingHrs() {
 		// need to check which day has called this method
 		if(this == SATURDAY || this == SUNDAY)
-			return this.workingHrs - 8;
-		return this.workingHrs;
+			return 0;
+		return 8;
+			// return this.workingHrs - 8;
+		// return this.workingHrs;
 	}
 }
