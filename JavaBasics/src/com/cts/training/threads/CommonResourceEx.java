@@ -2,6 +2,12 @@ package com.cts.training.threads;
 
 class Resource{
 	private int arr[];
+	
+	// synchronized public void changeArray() {
+	public void changeArray() {	
+	}
+	
+	// synchronized public void manageArray(String name, int size, int initValue) {
 	public void manageArray(String name, int size, int initValue) {
 		// allot the memory
 		this.arr = new int[size];
@@ -36,7 +42,12 @@ class UseArrayThread extends Thread{
 	}
 	
 	public void run() {
-		this.resource.manageArray(this.name, this.size, this.initValue);
+		// acquire lock on resource object
+		synchronized (this.resource) { // acquire
+			this.resource.manageArray(this.name, this.size, this.initValue);
+			// add more activities
+		} // released
+		
 	}
 }
 
@@ -45,6 +56,8 @@ public class CommonResourceEx {
 
 	public static void main(String[] args) {
 		Resource resource = new Resource();
+		
+		
 		
 		UseArrayThread thread1 = new UseArrayThread(resource, "Thread-1", 10, 100);
 		UseArrayThread thread2 = new UseArrayThread(resource, "Thread-2", 15, 500);
