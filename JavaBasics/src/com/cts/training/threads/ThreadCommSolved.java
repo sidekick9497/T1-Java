@@ -11,7 +11,7 @@ class BoxPro{
 	synchronized void put() {
 		if(this.produced) {
 			try {
-				wait();
+				wait(500);
 			} catch (InterruptedException e) {
 				
 			}
@@ -20,6 +20,7 @@ class BoxPro{
 		System.out.println("Produced : " + this.count);
 		this.produced = true;
 		notify();
+		// notifyAll()
 	}
 	synchronized void get() {
 		if(!this.produced) {
