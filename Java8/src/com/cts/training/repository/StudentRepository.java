@@ -15,7 +15,7 @@ public class StudentRepository {
 		students.add(new Student(4,"Fourth", "fourth@mail.com", 3, 4.0));
 		
 		students.add(new Student(5,"Fifth", "fifth@mail.com", 4, 3.7));
-		students.add(new Student(1,"Sixth", "sixth@mail.com", 4, 3.5));
+		students.add(new Student(6,"Sixth", "sixth@mail.com", 4, 3.5));
 		
 		return students;
 	}
