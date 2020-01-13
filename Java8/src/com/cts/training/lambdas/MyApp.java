@@ -14,6 +14,11 @@ class Sample{
 
 public class MyApp {
 
+	public static void test(String data) {
+		System.out.println("This is a braodcast message : " + data);
+	}
+	
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Sample obj = new Sample();
@@ -38,12 +43,18 @@ public class MyApp {
 							// TODO Auto-generated method stub
 							System.out.println("Greetings sent on TWITTER : " + message);
 						};*/
-		// Greetings facebook = (message)->System.out.println("Greetings sent on FACEBOOK : " + message);
+		Greetings facebook = (message)->System.out.println("Greetings sent on FACEBOOK : " + message);
 		// obj.sendMessage(facebook, "Hello All");
+		
+		// passing function as parameter
 		obj.sendMessage(message->System.out.println("Greetings sent on FACEBOOK : " + message), "Hello All");
 		
-		
-				
+		// Method Reference
+		// Greetings broadcast = <object  of class inherited from Greetings interface>		
+		// Greetings broadcast = <lambda expression having signature same as abstract method of interface>
+		// Greetings broadcast = <any function/method having signature same as abstract method of interface>
+		Greetings broadcast = MyApp :: test;
+		obj.sendMessage(broadcast, "Hello All");
 	}
 
 }
