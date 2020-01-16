@@ -5,16 +5,20 @@
 </head>
 <body>
 
-	<form action="server-url.jsp" enctype="" >  <!-- default is get method -->
+	<form action="server-url.jsp" >  <!-- default is get method -->
 		<ul>
 			<li>
-				Enter your name :	<input type="text" name="uname" required>
+				Enter your name :	<input type="text" name="uname" required pattern="">
 			</li>
 			<li>
 				Enter your email :	<input type="email" name="email">
 			</li>
 			<li>
-				<input type="submit" value="SUBMIT">
+				<input type="submit" value="SUBMIT">  <!-- sends data to server-url.jsp -->
+			</li>
+
+			<li>
+				<input type="submit" formaction="server-pro.jsp" formnovalidate formenctype="multipart/form-data" formmethod="post" value="SUBMITPRO">  <!-- sends data to server-pro.jsp -->
 			</li>
 		</ul>
 	</form>
