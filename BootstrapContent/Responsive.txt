@@ -1,0 +1,7 @@
+Grid system : uses 5 grid breakpoint
+
+extra small <576 px col auto layout equal width layout
+small 576-768px col-sm
+medium 768-992px col-md
+large 992-1200px col-lg
+extra large > 1200px col-xl
