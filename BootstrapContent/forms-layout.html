@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    
+
+  </head>
+  <body>
+    
+    
+
+    <div class="container">
+     
+      <hr>
+      <main>
+
+        <h2 class="text-muted mb-3">Input sizes</h2>
+        
+        <div class="form-group">
+          <label for="smFormInput">Small</label>
+          <input type="text" class="form-control form-control-sm" id="smFormInput" placeholder="Small input">
+        </div>
+        
+        <div class="form-group">
+          <label for="defaultFormInput">Default</label>
+          <input type="text" class="form-control" id="defaultFormInput" placeholder="Default input">
+        </div>
+        <div class="form-group">
+          <label for="lgFormInput">Large</label>
+          <input type="text" class="form-control form-control-lg" id="lgFormInput" placeholder="Large input">
+        </div>
+
+        <h2 class="text-muted mt-5 mb-3">Form layout using grid classes</h2>
+        <form>
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label for="gridFirstName">First name</label>
+                <input type="text" class="form-control" id="gridFirstName" placeholder="First name">
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label for="gridLastName">Last name</label>
+                <input type="text" class="form-control" id="gridLastName" placeholder="Last name">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="form-group">
+                <label for="gridAddress">Address</label>
+                <input type="text" class="form-control" id="gridAddress" placeholder="Address">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="form-group">
+                <label for="gridZip">Zip</label>
+                <input type="number" class="form-control" id="gridZip" placeholder="1234">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="form-group">
+                <label for="gridCountry">Country</label>
+                <select class="form-control" id="gridCountry">
+                  <option selected>Country</option>
+                  <option value="denmark">Denmark</option>
+                  <option value="sweden">Sweden</option>
+                  <option value="norway">Norway</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </form>
+
+
+        <h2 class="text-muted mt-5 mb-3">Compact form layout using grid classes</h2>
+        <form>
+          <div class="form-row">
+            <div class="col">
+              <div class="form-group">
+                <label for="compactFirstName">First name</label>
+                <input type="text" class="form-control" id="compactFirstName" placeholder="First name">
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label for="compactLastName">Last name</label>
+                <input type="text" class="form-control" id="compactLastName" placeholder="Last name">
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-6">
+              <div class="form-group">
+                <label for="compactAddress">Address</label>
+                <input type="text" class="form-control" id="compactAddress" placeholder="Address">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="form-group">
+                <label for="compactZip">Zip</label>
+                <input type="number" class="form-control" id="compactZip" placeholder="1234">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="form-group">
+                <label for="compactCountry">Country</label>
+                <select class="form-control" id="compactCountry">
+                  <option selected>Country</option>
+                  <option value="denmark">Denmark</option>
+                  <option value="sweden">Sweden</option>
+                  <option value="norway">Norway</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <h2 class="text-muted mt-5 mb-3">Horizontal form</h2>
+        
+        <form>
+          <div class="form-group row">
+            <label for="horizontalInputEmail" class="col-sm-3 col-form-label">Email</label>
+            <div class="col-sm-9">
+              <input type="email" class="form-control" id="horizontalInputEmail" placeholder="Email">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="horizontalInputPassword" class="col-sm-3 col-form-label">Password</label>
+            <div class="col-sm-9">
+              <input type="password" class="form-control" id="horizontalInputPassword" placeholder="Password">
+            </div>
+          
+          
+          </div>
+          <div class="form-group row">
+            <div class="offset-sm-3 col-sm-9">
+              <button type="submit" class="btn btn-primary">Sign in</button>
+            </div>
+          </div>
+        </form>
+
+        <h2 class="text-muted mt-5 mb-3">Inline forms (for small devices and larger)</h2>
+        <form class="form-inline">
+          <label class="sr-only" for="inlineInputOne">Name</label>
+          <input type="text" class="form-control mr-2" id="inlineInputOne" placeholder="Name">
+          <label class="sr-only" for="inlineInputTwo">Username</label>
+          <input type="text" class="form-control mr-2" id="inlineInputTwo" placeholder="Username">
+          <div class="form-check mr-2">
+            <input type="checkbox" class="form-check-input" id="inlineCheckbox">
+            <label class="form-check-label" for="inlineCheckbox">Remember me</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+      </main>
+    </div>
+
+    <!-- jQuery first, then Bootstrap JS -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

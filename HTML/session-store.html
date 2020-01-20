@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Session Store</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		window.onload = function(){
+			var store = window.sessionStorage;
+			var store = window.localStorage;
+			// store.set(<key>,<value>);
+			// to store data
+			store.set("uname", "First");
+			store.set("email", "first@mail.com");
+
+
+			// get the data
+			var name = store.get("uname");
+
+			// remove all data
+			store.clear();
+		}
+
+	</script>
+
+</body>
+</html>

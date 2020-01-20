@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	/* order  */
+
+
+
+		/*a:link {
+			color: #FF0000;
+		}
+		a:visited{
+			color: #00FF00;	
+		}
+		a:hover{
+			color: #FF00FF;		
+		}
+		a:active{
+			color: #0000FF;		
+		}*/
+
+		a.mclass:hover { /* combinator : pseudo */
+			color: BLACK;	
+		}
+
+		p {
+			display: none; 
+			background-color: RED;
+			padding: 20px;
+			background-color: YELLOW;
+		}
+
+		div:hover p {
+			display: block;
+		}
+
+
+	</style>
+</head>
+<body>
+
+<a href="combchk.html">This is test link</a> 
+
+<a class="mclass" href="combchk.html">This is next link</a> 
+
+<div>
+	This is my content
+	<p>This is metadata</p>
+</div>
+
+<p>Independent para</p>
+
+</body>
+</html>

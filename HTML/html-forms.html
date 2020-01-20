@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML5 Input Types</title>
+    </head>
+    <body>
+<form>
+  <ul>
+    <li>
+        <span>Select your favorite color: </span>
+        <div><input type="color" name="favcolor"></div>
+    </li>
+    <li>
+        <span>Birthday: </span>
+        <div><input type="date" name="bday"></div>
+    </li>
+    <li>
+        <span>Enter a date before 1980-01-01: </span>
+        <div><input type="date" name="bday" max="1979-12-31"></div></li>
+    <li>
+        <span>Enter a date after 2000-01-01: </span>
+        <div><input type="date" name="bday" min="2001-01-02"></div></li>
+    <li>
+        <span>Birthday (date and time): </span>
+        <div><input type="datetime-local" name="bdaytime"></div></li>
+    <li> 
+        <span>E-mail: </span>
+        <div><input type="email" name="email"></div>
+    </li>
+    <li>
+        <span>Birthday (month and year): </span>
+        <div><input type="month" name="bdaymonth"></div>
+    </li>
+    <li>
+        <span>Quantity (between 1 and 5): </span>
+        <div><input type="number" name="quantity" min="1" max="5"></div>
+    </li>
+    <li>
+        <span>Quantity: </span>
+        <div><input type="number" name="points" min="0" max="100" step="10" value="30"></div>
+    </li>
+    <li> <span>Range
+        <div><input type="range" name="points" min="0" max="10"></div>
+    </li>
+    <li> <span>Search Google: </span>
+        <div><input type="search" name="googlesearch"></div>
+    </li>
+    <li> <span>Telephone: </span>
+        <div><input type="tel" name="usrtel"></div>
+    </li>
+    <li> <span>Select a time: </span>
+        <div><input type="time" name="usr_time"></div>
+    </li>
+    <li> <span>Add your homepage: </span>
+        <div><input type="url" name="homepage"></div>
+    </li>
+    <li> <span>Select a week: </span>
+        <div><input type="week" name="week_year"></div>
+    </li>
+</form>
+</body>
+</html>
