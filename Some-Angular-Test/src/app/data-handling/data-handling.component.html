@@ -1,0 +1,45 @@
+<div>
+  <h1>Data Handling Component</h1>
+  <!-- interpolation -->
+  <div ><h2>Welcome {{showMessage()}}</h2></div>
+  <div><h2>NAME : {{name}}</h2></div>
+  <div><h2>AGE : {{age}}</h2></div>
+  <div><h2>EMAIL : {{email}}</h2></div>
+  <!-- div will visible only when condition is satisfied -->
+  <!--
+    <div *ngIf="age >= 18"><h3>Eligible to vote...</h3></div>
+  -->
+  <div *ngIf="isEligible()"><h3>Eligible to vote...</h3></div>
+
+  <div [ngSwitch]="job" >
+    <div *ngSwitchCase="'Developer'"><h3>Needs to have good logics...</h3></div>
+    <div *ngSwitchCase="'Designer'"><h3>Needs to be creative...</h3></div>
+    <div *ngSwitchCase="'Manager'"><h3>Needs to have good soft skill...</h3></div>
+  </div>
+
+  <hr/>
+
+  <div>
+    <h3>Hobbies...</h3>
+    <!--
+      <h3>{{hobbies}}</h3>
+      <div *ngFor="let <var> of <collection>">
+
+      </div
+    -->
+
+    <table class="table">
+        <thead>
+          <th>Sn</th>
+          <th>Hobby</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let hobby of hobbies; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{hobby}}</td>
+          </tr>  
+        </tbody>
+    </table>
+  </div>
+  <div><input type="button" value="Change"  (click)="changeVal()"/></div>
+</div>
