@@ -1,0 +1,34 @@
+<div>
+  <h3>Add new Product</h3>
+
+  <!-- 
+    Need to define that submit button does not send data to server
+    instead should send data to class
+    Need to assign an angular id to form (FormGroup) and need to specify
+    that id is of type Angular Form (not the HTML form)
+  -->
+  <form #frm="ngForm" ngForm (ngSubmit)="saveProduct(frm.value)" > <!-- HTML form will be mapped as Angular FormGroup Object-->
+   
+    <div class="row">
+      <div class="col"><label for="">Enter product name</label></div>
+      <!-- HTML input will be mapped as Angular FormControl Object -->
+      <div class="col"><input type="text" name="pname"  ngModel /></div>
+    </div>
+    <div class="row">
+      <div class="col"><label for="">Enter product category</label></div>
+      <div class="col"><input type="text" name="pcat" ngModel /></div>
+    </div><div class="row">
+      <div class="col"><label for="">Enter product cost</label></div>
+      <div class="col"><input type="text" name="pcost" ngModel /></div>
+    </div>
+    <div class="row">
+      <div class="col"><input type="submit" value="Save"/></div>
+    </div>
+
+  </form>
+
+  <h2>NAME : {{name}}</h2>
+  <h2>CATEGORY : {{category}}</h2>
+  <h2>COST : {{cost}}</h2>
+
+</div>
