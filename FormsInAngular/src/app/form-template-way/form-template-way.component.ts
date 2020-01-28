@@ -32,6 +32,7 @@ export class FormTemplateWayComponent implements OnInit {
         "product_category" : new FormControl("Books", Validators.required),
         // "product_cost" : new FormControl("500", this.rangeCheck) // method name of constraint
         // add multipe constriant
+      //Validators.compose used to apply mutliple constraints
         "product_cost" : new FormControl("500", Validators.compose([Validators.required, this.rangeCheck])) // array of validation rules 
     }); 
 
