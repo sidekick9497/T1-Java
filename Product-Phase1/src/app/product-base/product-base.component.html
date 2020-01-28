@@ -1,0 +1,36 @@
+<div>
+  <h3>Add new Product</h3>
+  <div class="row">
+    <div class="col"><label for="">Enter product name</label></div>
+    <div class="col"><input type="text" #txtName /></div>
+  </div>
+  <div class="row">
+    <div class="col"><label for="">Enter product category</label></div>
+    <div class="col"><input type="text" #txtCategory /></div>
+  </div><div class="row">
+    <div class="col"><label for="">Enter product cost</label></div>
+    <div class="col"><input type="text" #txtCost /></div>
+  </div>
+  <div class="row">
+    
+    <div class="col"><input type="button" value="Save" (click)="saveProduct(txtName, txtCategory, txtCost)" /></div>
+  </div>
+<hr/>
+  <table class="table">
+    <thead>
+      <th>Sn</th>
+      <th>NAME</th>
+      <th>CATEGORY</th>
+      <th>COST</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products; let i = index">
+        <td>{{i+1}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.category}}</td>
+        <td>{{product.cost}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

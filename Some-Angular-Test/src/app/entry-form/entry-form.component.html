@@ -1,0 +1,24 @@
+<div>
+  <welcome></welcome>
+    <div>
+      <label for="uname">Enter name</label>
+      <!-- Angular id : #<id> --> 
+      <input type="text" id="uname" #uname/>
+    </div>
+    <div>
+      <label for="email">Enter Email</label> 
+      <input type="text" id="email" #uemail />
+    </div>
+    <div>
+      <label for="age">Enter Age</label> 
+      <input type="text" id="age" #uage/>
+    </div>
+    <div>
+      
+      <input type="button" class="button btn-danger" value="Save" (click)="saveData(uname, uemail, uage)"/>
+    </div>
+  <hr/>
+  <h2>NAME : {{name}}</h2>
+  <h2>EMAIL : {{email}}</h2>
+  <h2>AGE : {{age}}</h2>
+</div>

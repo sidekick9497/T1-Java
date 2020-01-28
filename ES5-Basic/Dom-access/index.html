@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        
+        <script type="text/javascript">
+            function handleClick(src){
+                // this.value='Clicked'; // global object : window object
+                src.value = 'Clicked'; // src: button object
+            }
+
+            function changeDiv(){
+                var divObj = document.getElementById('content');
+                divObj.innerHTML = "<h1>HELLO</h1>";
+            }
+
+            function changeText(){
+                // need to access textbox
+               var txtObject =  document.getElementById('txt');
+               
+               txtObject.value = "Hello";
+                /*
+               // array of all comp. having name as 'uname'
+               var components = document.getElementsByName("uname"); 
+               
+               // array of all comp. having css class as 'row'
+               var components = document.getElementsByClassName('row');
+
+               var form = document.forms["frm1"]; // access form with id 'frm1'
+               var form = document.forms[0]; // access form with id 'frm1'
+               */
+
+            }
+
+            
+        </script>
+    </head>
+    <body>
+        <div>
+            <h1>DOM Example</h1>
+            <input type="button" value="Button" onclick="this.value='Clicked'"/>
+            <br/>
+            <br/>
+            <input type="button" value="Button" onclick="handleClick(this)"/>
+
+            <hr />
+            <input type="button" value="Button" onclick="changeText()"/>
+            <input type="text" id="txt"/>
+
+            <hr/>
+            <form id="frm1"></form>
+            <form id="frm2"></form>
+            <form id="frm3"></form>
+            <hr/>
+            <input type="button" value="ButtonDiv" onclick="changeDiv()"/>
+            <div id="content">
+
+            </div>
+
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,53 @@
+<div>
+  <h3>Add new Product</h3>
+
+  <!-- 
+    Need to define that submit button does not send data to server
+    instead should send data to class
+    No arg to be passed, as class has virtual form
+ -->
+  <form  [formGroup]="myFormGroup"  (ngSubmit)="saveProduct()" > <!-- HTML form will be mapped as Angular FormGroup Object-->
+   
+    <div class="row">
+      <div class="col"><label for="">Enter product name</label></div>
+      <!-- HTML input will be mapped as Angular FormControl Object -->
+      <div class="col">
+        <input type="text" name="pname"  [formControl]="myProductName" />
+        <span *ngIf="!myFormGroup.controls['product_name'].valid && myFormGroup.controls['product_name'].dirty" class="bg-warning">Product name required!!!</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col"><label for="">Enter product category</label></div>
+      <div class="col"><input type="text" name="pcat"  [formControl]="myFormGroup.controls['product_category']"/></div>
+    </div><div class="row">
+      <div class="col"><label for="">Enter product cost</label></div>
+      <div class="col">
+        <input type="text" name="pcost"  [formControl]="myFormGroup.controls['product_cost']"/>
+        <span *ngIf="myFormGroup.controls['product_cost'].hasError('range') && myFormGroup.controls['product_cost'].dirty" class="bg-warning">Invalid Cost value!!!</span>
+        <span *ngIf="myFormGroup.controls['product_cost'].hasError('required') && myFormGroup.controls['product_cost'].dirty" class="bg-warning">Cost required!!!</span>
+        <!--
+            Common Message
+        <span *ngIf="!myFormGroup.controls['product_cost'].valid && myFormGroup.controls['product_cost'].dirty" class="bg-warning">Invalid Cost value!!!</span>
+        -->
+      </div>
+    </div>
+    <div class="row">
+      <!-- 
+        Keep the submit button disabled till all constraints are satisfied
+        Angular allows to check if constraints are satisfied or not
+        myFormGroup.valid : inbuilt boolean
+      -->
+      <div class="col"><input type="submit" value="Save" [disabled]="!myFormGroup.valid" /></div>
+    </div>
+
+  </form>
+
+    <div *ngIf="!myFormGroup.valid && myFormGroup.dirty" class="bg-danger">
+      <h3>Incomplete Information!!!</h3>
+    </div>
+
+  <h2>NAME : {{name}}</h2>
+  <h2>CATEGORY : {{category}}</h2>
+  <h2>COST : {{cost}}</h2>
+
+</div>
